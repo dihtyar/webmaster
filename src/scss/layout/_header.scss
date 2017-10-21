@@ -1,0 +1,206 @@
+/*
+================================================================================
+|                                     HEADER                                   |
+================================================================================
+*/
+header{
+	background: $base-bg;
+	width:100%; height: 80px;
+	min-width: $min-width;
+	text-align:left;
+	position: fixed;
+	z-index: 9999;
+    order: 1;
+	display: flex;
+	padding: 35px 30px;
+	box-shadow: 0 1px 2px rgba(0,0,0,.1);
+	.wrapper{
+		max-width: 656px;
+	}
+}
+
+.menu{
+	ul{
+		list-style: none;
+		display: flex;
+		justify-content: space-around;
+		li{
+			a{
+				color: $link-color;
+				font-weight: 300;
+				&:hover, &.active, &.mPS2id-highlight {
+					color: $link-color-hover;
+				}
+			}
+		}
+	}
+	.mob{
+		display: none;
+	}
+
+}
+/* --- mobile ---*/
+
+.mobile_nav_icon {
+	position: absolute;
+	z-index: 1100;
+	display: none;
+	float: right;
+	height: 48px;
+	width: 48px;
+	border: 2px solid #212121;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	top: 50%;
+	right: 0;
+	margin-top: -24px;
+	cursor: pointer;
+}
+.mobile_nav_icon div{
+	height: 2px;
+	width: 24px;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translate(0);
+	-moz-transform: translate(0);
+	-ms-transform: translate(0);
+	-o-transform: translate(0);
+	transform: translate(0);
+	background-color: #212121;
+	display: block;
+	transition: all ease-out .25s;
+	margin: auto;
+}
+
+.mobile_nav_icon div::before,
+.mobile_nav_icon div::after {
+	content: '';
+	display: block;
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	background-color: #212121;
+	transition: all ease-out .5s;
+}
+.mobile_nav_icon div::before{
+	top: -6px;
+}
+.mobile_nav_icon div::after{
+	bottom: -6px;
+}
+.mobile_nav_icon:hover{
+	border-color: #212121;
+}
+.mobile_nav_icon:hover div,
+.mobile_nav_icon:hover div::before,
+.mobile_nav_icon:hover div::after{
+	background-color: #212121;
+}
+.mobile_nav_icon.active div::before,
+.mobile_nav_icon.active div:after,
+.active .mobile_nav_icon div::before,
+.active .mobile_nav_icon div:after
+{
+	background-color: #212121;
+}
+
+.mobile_nav_icon.active:hover div::before,
+.mobile_nav_icon.active:hover div:after,
+.active .mobile_nav_icon:hover div::before,
+.active .mobile_nav_icon:hover div:after
+{
+	background-color: #212121;
+}
+.mobile_nav_icon.active div,
+.mobile_nav_icon.active:hover div,
+.active .mobile_nav_icon div,
+.active .mobile_nav_icon:hover div
+{
+	background-color: rgba(250, 250, 250, 0);
+}
+
+.mobile_nav_icon.active div::before,
+.active .mobile_nav_icon div::before
+{
+	-webkit-transform: rotate(-225deg);
+	-moz-transform: rotate(-225deg);
+	-ms-transform: rotate(-225deg);
+	-o-transform: rotate(-225deg);
+	transform: rotate(-225deg);
+	top: 0;
+}
+
+.mobile_nav_icon.active div::after,
+.active .mobile_nav_icon div::after
+{
+	-webkit-transform: rotate(225deg);
+	-moz-transform: rotate(225deg);
+	-ms-transform: rotate(225deg);
+	-o-transform: rotate(225deg);
+	transform: rotate(225deg);
+	top: 0;
+}
+
+
+
+div.links_container.top_level_nav_open{
+	margin-right: 0;
+}
+
+/* --- mobile ---*/
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+	
+}
+
+@media screen and (min-width: 992px){
+	
+}
+
+@media screen and (max-width: 991px) {
+	
+}
+
+@media screen and (max-width: 769px) {
+	.menu{
+		padding: 20px 20px;
+		position: relative;
+	}
+	.menu ul{
+		display: none;
+	}
+	.menu ul li{
+		text-align: center;
+		padding: 10px 0;
+	}
+	.menu a.mob {
+		display: block;
+		font-size: 14px;
+		color: #000;
+		font-weight: bold;
+		padding: 10px 3%;
+		text-decoration: none;
+		width: 100%;
+		position: relative;
+	}
+
+	.mobile_nav_icon {
+		display: block;
+	}
+	header .wrapper{
+		padding: 0;
+	}
+	header{
+		padding: 0;
+		height: auto;
+	}
+
+}

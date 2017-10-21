@@ -1,0 +1,29 @@
+/* reset */
+$min-width: 320px; 
+$max-width: 850px;
+$base-bg: #FFF; 
+$base-font-size: 14px;
+$base-line-height: 1;
+$base-font-family:  'Roboto', sans-serif;
+$custom-font-family: 'Open Sans', sans-serif;
+$link-color: #435993;
+$link-color-hover: #1c1c1c;
+$default-transition: all 0.2s linear;
+
+/* main variables */
+
+//text, titles
+$text-color: #1c1c1c;
+$title-color: #000;
+$br-color: #e5e5e5;
+$br-color-f: #365995;
+$color_pl: #C9C9C9;
+$btn: #435993;
+$title-font-family: $custom-font-family;
+
+$font-size-h1: 36px;
+$line-height-h1: 42px;
+$font-size-h2: 30px;
+$line-height-h2: 30px;
+$font-size-h3: 28px;
+$line-height-h3: 32px;
