@@ -74,6 +74,69 @@ $(function(){
     });
 
 
+    // var rangeS = $("#js-range"),
+    //     rangeV = $(".js-range-value"),
+    //     step = parseInt(rangeS.attr("step")),
+    //     min = rangeS.attr("min"),
+    //     max = rangeS.attr("max");
+    //
+    // rangeS.rangeslider({
+    //     polyfill: false,
+    //     onInit: function() {
+    //         rangeV.text(rangeS.val());
+    //     },
+    //     onSlide: function(position, value) {
+    //         rangeV.text(value);
+    //     }
+    // });
+    //
+    //
+    //
+    // $(".js-btn").on("click", function() {
+    //
+    //     var currentVal = parseInt(rangeS.val());
+    //
+    //     if($(this).hasClass("minus")) {
+    //         if(currentVal > min) {
+    //             rangeS.val(currentVal - step).rangeslider('update', true);
+    //         }
+    //     } else {
+    //         if(currentVal < max) {
+    //             rangeS.val(currentVal + step).rangeslider('update', true);
+    //         }
+    //     }
+    //
+    // });
+
+
+
+
+
+
+
+    // $('.pl_h').on('click', function (e) {
+    // });
+    // $(document).mouseup( function( event ) {
+    //     if ( $('.pl_h').has( event.target ).length === 0 ) {
+    //         if( $('.pl_h').is(':visible')) {
+    //             // $('.pl_h').hide();
+    //             $('.pl_h').show();
+    //         }
+    //         if($('.pl_h + .form-control').val() === ''){
+    //             $('.pl_h').show();
+    //         }
+    //     }
+    // });
+    //
+    // if($('.pl_h + .form-control').val() !== ''){
+    //     $('.pl_h').show();
+    // }
+
+
+    $(".range-example-single-1").asRange({
+        range: false
+    });
+
 
 });
 

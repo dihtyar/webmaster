@@ -30,7 +30,8 @@
                     <form action="">
                         <div class="form__main input_main">
                             <div class="form__main__item">
-                                <input type="text" placeholder="ФИО">
+                                <i class="pl_h">ФИО</i>
+                                <input type="text" class="form-control" placeholder="ФИО">
                             </div>
                             <div class="form__main__item">
                                 <div class="sel-main type-sel1">
@@ -47,13 +48,16 @@
                                 </div>
                             </div>
                             <div class="form__main__item">
-                                <input type="text" placeholder="Место проживания">
+                                <i class="pl_h">Место проживания</i>
+                                <input type="text" class="form-control" placeholder="Место проживания">
                             </div>
                             <div class="form__main__item">
-                                <input type="text" placeholder="Skype">
+                                <i class="pl_h">Skype</i>
+                                <input type="text" class="form-control" placeholder="Skype">
                             </div>
                             <div class="form__main__item">
-                                <input type="text" placeholder="E-mail">
+                                <i class="pl_h">E-mail</i>
+                                <input type="text" class="form-control" placeholder="E-mail">
                             </div>
                         </div>
                     </form>
@@ -118,10 +122,17 @@
                 <div class="icon__sep"><img src="img/icon-js.svg" width="47" height="47" alt=""></div>
                 <h2>Уровень владения JavaScript</h2>
                 <div class="slide_main">
-
+                    <ul class="slide_main__desc">
+                        <li>Не владею</li>
+                        <li>Использую готовые <br>решения</li>
+                        <li>Использую готовые решения <br> и умею и переделывать</li>
+                        <li>Пишу сложный JS с нуля</li>
+                    </ul>
+                    <input class="range-example-single-1" type="text" min="0" max="10" value="5" name="points" step="0.01">
                 </div>
             </section>
             <section id="wp4" class="section">
+
                 <div class="icon__sep"><img src="img/icon-list.svg" width="47" height="47" alt=""></div>
                 <h2>Расскажите о себе</h2>
                 <div class="wrap_form input_main">
@@ -157,7 +168,6 @@
                         <div></div>
                     </div>
                 </a>
-
             </div>
         </div>
     </header>
@@ -191,6 +201,7 @@
 <script src="js/components/jquery.malihu.PageScroll2id.min.js"></script>
 <script src="js/components/jquery.scrollbar.js"></script>
 <script src="js/components/select2.full.min.js"></script>
-<script type="text/javascript" src="js/custom.js" ></script>
+<script src="js/components/jquery-asRange.min.js"></script>
+<script src="js/custom.js" ></script>
 </body>
 </html>
