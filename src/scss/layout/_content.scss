@@ -604,8 +604,8 @@
 	top: 7px;
 	left: 0;
 	right: 0;
-	bottom: 0;
 }
+
 .slide_main {
 	margin-bottom: 100px;
 	.rangeslider{
@@ -659,9 +659,10 @@
 		border-radius: 0;
 		box-shadow: none;
 		height: 14px;
+		z-index: 1;
 		&:before{
 			content: " ";
-			background: url("../img/skew.png") 0 0 no-repeat;
+			background: url("../img/skew.svg") 0 0 no-repeat;
 			position: absolute;
 			top: -2px;
 			left: 0;
@@ -677,7 +678,7 @@
 		height: 14px;
 		border-radius: 0;
 		box-shadow: none;
-		background: linear-gradient(to right, rgba(207,173,237,1) 0%, rgba(231,56,39,1) 0%, rgba(213,179,242,1) 0%, rgba(182,161,223,1) 46%, rgba(141,137,198,1) 77%, rgba(141,137,198,1) 100%);
+		background: linear-gradient(to right, rgba(214,178,241,1) 0%, rgba(191,166,229,1) 21%, rgba(146,139,200,1) 46%, rgba(83,104,164,1) 74%, rgba(54,89,149,1) 100%);
 	}
 	.asRange .asRange-pointer:before{
 		background: url("../img/range.svg") center no-repeat;
@@ -695,24 +696,79 @@
 	}
 }
 
-.slide_main__desc{
-	display: flex;
-	flex-wrap: wrap;
-	list-style: none;
-	margin-bottom: 20px;
-}
 
 	.slide_main__desc{
+		font-size: 0;
+		list-style: none;
+		margin-bottom: 20px;
+		width: 100%;
+		position: relative;
+		z-index: 2;
 		li{
+			display: inline-block;
+			vertical-align: bottom;
+			position: relative;
+			width: 25%;
 			font-size: 13px;
 			font-weight: 100;
 			color: #2e211c;
 			line-height: 18px;
-			flex: 1;
+			&:before{
+				content: " ";
+				position: absolute;
+				background: url("../img/dot.png") 0 0 repeat-y;
+				width: 1px;
+				left: 0;
+				bottom: -24px;
+			}
+			&:after{
+				content: " ";
+				position: absolute;
+				width: 1px;
+				background: #fff;
+				left: 0;
+				display: block;
+			}
+			&:first-child{
+				&:before{
+					height: 20px;
+					bottom: -27px;
+				}
+			}
+			&:nth-child(2){
+				&:before{
+					height: 15px;
+				}
+
+				&:after{
+					bottom: -35px;
+					height: 9px;
+				}
+			}
+			&:nth-child(3){
+				&:before{
+					height: 13px;
+					bottom: -20px;
+				}
+
+				&:after{
+					bottom: -35px;
+					height: 12px;
+				}
+			}
 			&:last-child{
+				&:before{
+					height: 12px;
+					left: auto;
+					right: 0;
+					bottom: -20px;
+				}
 				text-align: right;
 			}
+
 		}
+
+
 	}
 
 
