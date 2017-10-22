@@ -803,7 +803,49 @@
 	.content{
 		margin-top: 74px;
 	}
+	.wrapper{
+		padding: 0 20px;
+	}
 }
 
+@media screen and (max-width: 650px){
+	.check-main > div{
+		padding-left: 0;
+	}
+}
 
+@media screen and (max-width: 600px){
+
+	.check-main > div{
+		flex:  1 1 50%;
+		margin-bottom: 20px;
+	}
+	.check-main{
+		margin-bottom: 30px;
+	}
+
+	.slide_main__desc li{
+		font-size: 11px;
+		line-height: 14px;
+	}
+}
+
+@media screen and (max-width: 600px){
+	.slide_main .asRange:before{
+		top: -5px;
+	}
+}
+
+@media screen and (max-width: 384px){
+	.check-main > div{
+		flex:  1 1 100%;
+		margin-bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 365px){
+	.slide_main .asRange:before {
+		top: -7px;
+	}
+}
 
