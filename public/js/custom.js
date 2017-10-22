@@ -76,9 +76,24 @@ $(function(){
 
 
     // form
-    var inputs =$('.form-control');
-
+    var inputs =$('.form-control'),
+        inp_desc = $('.pl_h');
     function textForm() {
+
+        if(inputs.val()!=='') {
+            $('.pl_h').show();
+        }else{
+            $('.pl_h').hide();
+        }
+
+        inp_desc.on('click', function () {
+            $(this).parent().find(inputs).focus();
+        });
+
+        if(inputs.val()!=='') {
+            $(this).parent().find('.pl_h').show();
+        }
+
         inputs.bind('blur', function () {
             if(inputs.val()!==''){
                 $(this).parent().find('.pl_h').show();
@@ -89,6 +104,7 @@ $(function(){
             $(this).parent().find('.pl_h').show();
         });
     }
+
     textForm();
 
     // range
